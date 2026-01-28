@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Infinite Kinetic Typography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+        font-family: 'Inter', sans-serif;
+        overflow: hidden; /* Prevent scrollbars on the body */
+      }
+      /* Custom Marquee Keyframes */
+      @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      @keyframes scroll-right {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+      
+      .animate-scroll-left {
+        animation: scroll-left 40s linear infinite;
+      }
+      .animate-scroll-right {
+        animation: scroll-right 45s linear infinite;
+      }
+
+      /* Slow down slightly on hover for better readability if desired */
+      .group:hover .animate-scroll-left,
+      .group:hover .animate-scroll-right {
+        animation-play-state: paused;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
